@@ -1,0 +1,15 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "CafePoint GP (Dev)",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "cafegp",
+      "Username": "app",
+      "Password": "troque_por_uma_senha_segura",
+      "SSLMode": "prefer",
+      "PassFile": "/tmp/pgpassfile"
+    }
+  }
+}
