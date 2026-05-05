@@ -47,6 +47,10 @@ fi
 echo "==> Executando docker compose up..."
 docker compose -f "$COMPOSE_FILE" up -d --remove-orphans
 
+# 5.1 Reiniciar nginx para resolver DNS/IPs dos containers
+echo "==> Reiniciando nginx..."
+docker restart cafegp-nginx 2>/dev/null || true
+
 # 6. Aguardar health checks
 echo "==> Aguardando health checks (timeout: ${HEALTH_TIMEOUT}s)..."
 ELAPSED=0
